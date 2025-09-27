@@ -1,0 +1,28 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: #ccc;
+    padding: 6px 20px;
+    border-top: 1px solid #444; 
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.footer-right a:hover {
+    color: #7f8c8d;
+    transform: scale(1.2);
+}

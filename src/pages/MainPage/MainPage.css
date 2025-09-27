@@ -1,0 +1,102 @@
+.main-page-container {
+    display: flex;
+    flex-grow: 1;
+    color: #f0f0f0;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+}
+
+.main-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; 
+    filter: blur(4px);
+    z-index: -1;
+}
+.image-column {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.main-photo {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .main-photo{
+        animation: Logo-image-spin infinite 20s linear;
+    }
+    
+}
+
+.content-column {
+    flex: 1.2;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-column h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.content-column p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    max-width: 600px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 30px;
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: transparent;
+    border: 3px solid #7289DA;
+    border-radius: 16px;
+    padding: 12px 24px;
+    color: #f0f0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    max-width: 250px;
+    width: 100%;
+    align-self: flex-start;
+    transition: all 0.2s ease-in-out;
+}
+
+.discord-button:hover {
+    background-color: #7289DA;
+    color: #ffffff;
+}
+
+.discord-icon {
+    width: 32px;
+    height: 32px;
+}
+
+@keyframes Logo-image-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
